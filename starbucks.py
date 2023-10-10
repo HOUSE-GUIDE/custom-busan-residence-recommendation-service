@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 
 gu=pd.read_html('https://inasie.github.io/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/5/',encoding='utf-8')[0]
-seoul=gu[gu['법정동주소'].str.contains('서울')][1:]
+seoul=gu[gu['법정동주소'].str.contains('부산')][1:]
 
 api="efc1b26d609b687398664b4f30490c20"
 
@@ -20,7 +20,7 @@ for q in seoul['법정동주소']:
         starbucks.extend(places)
 sb=pd.DataFrame(starbucks)
 sb=sb.drop_duplicates('place_name',keep='last')
-sb=sb[sb['address_name'].str.contains('서울')]
+sb=sb[sb['address_name'].str.contains('부산')]
 
 print("반 진행")
 starbucksr=[]
@@ -40,4 +40,4 @@ sbr=sbr[sbr['address_name'].str.contains('서울')]
 bucks=pd.concat([sb,sbr],axis=0)
 bucks=bucks.drop_duplicates(['address_name'],keep='last')
 print(bucks)
-bucks.to_csv('starbucks.csv', index=False)
+bucks.to_csv('starbucksTest.csv', index=False)
