@@ -1,6 +1,6 @@
 # 내가 살고 있는 집 주소 위도/ 경도
 
-# 아직 키에러 뜨는 코드ㅠㅠ 왜그런거죠
+# 아직 에러 뜨는 코드ㅠㅠ 왜그런거죠
 
 import json
 import requests
@@ -9,7 +9,7 @@ import pandas as pd
 # from PyKakao import Karlo
 # api = Karlo(service_key="efc1b26d609b687398664b4f30490c20")
 
-addr = '인천시 남동구 운연천로11'
+addr = '부산시 사하구 낙동대로'
 url = 'https://dapi.kakao.com/v2/local/search/address.json?query='+addr
 headers = {'Authorization': 'KakaoAk ~'}
 
