@@ -1,14 +1,16 @@
+# 원하는 행정동과 시설들을 리스트에 넣으면, csv가 출력으로 나오는 데이터 수집 코드
 
 import json
 import requests
 import pandas as pd
 
 # 행정동 리스트
-dong_list = ['중앙동', '동광동', '대청동', '보수동', '부평동' , '광복동' , '남포동', '영주1동', '영주2동']  # 원하는 행정동을 리스트에 추가하세요.
 
-# 시설 리스트
-facility_list = ['편의점', '학교', '병원']  # 원하는 시설을 리스트에 추가하세요.
+# 행정동을 리스트에 추가해주세영
+dong_list = ['중앙동', '동광동', '대청동', '보수동', '부평동' , '광복동' , '남포동', '영주1동', '영주2동']  
 
+# 시설 리스트 (카테고리)
+facility_list = ['편의점', '학교', '병원'] 
 headers = {
     "Authorization": "KakaoAK efc1b26d609b687398664b4f30490c20"
 }
@@ -60,4 +62,4 @@ for dong in dong_list:
             filename=f'{dong}_{facility}.csv'
             df.to_csv(filename,index=False)
 
-print("파일 생성 완료")
+print("csv파일 생성 완료! \n 다음 수집할 데이터를 리스트에 넣고 생성해!")
