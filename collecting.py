@@ -57,9 +57,10 @@ for dong in dong_list:
                     print(f"No results found on page {i}")
             
             df=pd.DataFrame(places_name_list,columns=[f'{facility}'])
-            df.drop_duplicates(inplace=True)
+            df.drop_duplicates(inplace=True) # 중복 제거하는 코드
             
-            filename=f'{dong}_{facility}.csv'
+            # csv파일 생성 부분
+            filename=f'{dong}_{facility}.csv' 
             df.to_csv(filename,index=False)
 
 print("csv파일 생성 완료! \n 다음 수집할 데이터를 리스트에 넣고 생성해!")
