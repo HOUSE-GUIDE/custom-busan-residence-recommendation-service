@@ -34,7 +34,7 @@ for dong in dong_list:
                 params = {
                     'x': float(x),
                     'y': float(y),
-                    'radius': 2000,
+                    'radius': 3000, #3km 반경으로 측정
                     'page': i,
                     'size': 15,
                     'sort': 'distance'
