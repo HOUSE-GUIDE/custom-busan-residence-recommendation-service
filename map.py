@@ -45,7 +45,7 @@ for dong in dong_list:
         # 해당 동에 대한 원 추가 (반경 2km)
         folium.Circle(
             location=[y,x],
-            radius=2000,
+            radius=1500,
             color='#3186cc',
             fill=True,
             fill_color='#3186cc'
