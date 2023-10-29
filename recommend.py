@@ -27,7 +27,7 @@ weights = [1] * num_criteria
 all_data = pd.concat(data_frames)
 scores = []
 for index, row in all_data.iterrows():
-    score = sum([weights[i] for i in range(num_criteria) if selected_criteria[i] in row['기관 이름']])
+    score = sum([weights[i] for i in range(num_criteria) if selected_criteria[i] in row['기관 이름']]) # 저 기관 이름이 있는 것만 카운트 하는 듯
     scores.append(score)
 all_data['점수'] = scores
 
