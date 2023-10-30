@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # data/남구 폴더 내의 CSV 파일 목록 가져오기
-data_dir = 'data/남구'
+data_dir = 'data/행정구별_data/사하구'
 csv_files = [f for f in os.listdir(data_dir) if f.endswith('.csv')]
 
 # 무작위로 선택할 기관 수
@@ -18,7 +18,7 @@ for csv_file in csv_files:
     data_frames.append(df)
 
 # 무작위로 기관 선택
-selected_criteria = random.sample(["지하철역", "대형마트", "백화점", "유치원", "초등학교", "파출소", "병원", "소방서", "공원"], num_criteria)
+selected_criteria = random.sample(['지하철역','대형마트','유치원','경찰서','종합병원','소방서','도시근린공원','해수욕장'], num_criteria)
 
 # 가중치 설정 (일단 모든 기관에 동일한 가중치)
 weights = [1] * num_criteria
