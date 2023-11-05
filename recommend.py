@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # data/남구 폴더 내의 CSV 파일 목록 가져오기
-data_dir = 'data/행정구별_data/사하구'
+data_dir = 'data/행정구별_data/영도구'
 csv_files = [f for f in os.listdir(data_dir) if f.endswith('.csv')]
 
 # 무작위로 선택할 기관 수
