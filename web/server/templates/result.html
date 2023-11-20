@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>추천 결과</title>
+  </head>
+  <body>
+    <h1>추천 결과</h1>
+
+    {% for dong in top3_dong %}
+    <p>{{ dong }}</p>
+    {% endfor %}
+  </body>
+</html>
