@@ -1,8 +1,9 @@
 import pandas as pd
 import os
 from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
-facility_list = ['지하철역','대형마트','유치원','경찰서','종합병원','소방서','도시근린공원','해수욕장']
+facility_list = ['지하철역','대형마트','유치원','경찰서','종합병원','소방서','도시근린공원','해수욕장','대학교']
 
 # csv 파일이 있는 디렉토리 리스트 (각 구별로 분류된 폴더)
 # directory_list = ['금정구','남구','동구','동래구','부산진구','북구','사상구','사하구','서구','수영구','연제구','영도구','중구','해운대구']  # 구 폴더 이름~~ 기장 강서 제외
@@ -31,23 +32,47 @@ for directory in directory_list:
         df_matrix.loc[dong, facility] = len(df)
 
 print("가중치 계산 시작")
+
 def calculate_similarity(user_weights):
     # 사용자의 가중치에 따라 동별 시설 점수 계산
-    print(len(user_weights.values()))  # 사용자 가중치의 길이 출력
-    print(df_matrix.shape[1])  # df_matrix의 열의 수 출력
-    
-    df_matrix_weighted = df_matrix * list(user_weights.values())
+    user_weights_expanded = np.array([user_weights.get(facility, 0) for facility in df_matrix.columns])
+    user_weights_expanded = user_weights_expanded / np.sum(user_weights_expanded)  # 정규화
+
+    # 사용자의 가중치로 df_matrix를 조정
+    df_matrix_weighted = df_matrix.mul(user_weights_expanded, axis=1)
 
     # 동 간 유사도 계산
     similarity_matrix = cosine_similarity(df_matrix_weighted)
 
     # 사용자 가중치와 각 동과의 유사도 계산
-    user_dong_similarity = similarity_matrix @ list(user_weights.values())
+    user_dong_similarity = similarity_matrix @ user_weights_expanded
 
     # 유사도가 가장 높은 동 3개 추출
     top3_dong_index = user_dong_similarity.argsort()[-3:][::-1]
     top3_dong = df_matrix.index[top3_dong_index]
 
     return top3_dong
+
+# def calculate_similarity(user_weights):
+#     print(len(user_weights.values()))  # 사용자 가중치의 길이 출력
+#     print(df_matrix.shape[1])  # df_matrix의 열의 수 출력
+    
+#     # 사용자의 가중치에 따라 동별 시설 점수 계산
+#     user_weights_expanded = [user_weights.get(facility, 0) for facility in df_matrix.columns]
+#     user_weights_expanded = user_weights_expanded / sum(user_weights_expanded)  # 정규화
+
+#     df_matrix_weighted = df_matrix * user_weights_expanded
+
+#     # 동 간 유사도 계산
+#     similarity_matrix = cosine_similarity(df_matrix_weighted)
+
+#     # 사용자 가중치와 각 동과의 유사도 계산
+#     user_dong_similarity = similarity_matrix @ user_weights_expanded
+
+#     # 유사도가 가장 높은 동 3개 추출
+#     top3_dong_index = user_dong_similarity.argsort()[-3:][::-1]
+#     top3_dong = df_matrix.index[top3_dong_index]
+
+#     return top3_dong
 
 print("코드 끝")
