@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/web/main.css" />
     <title>Main page</title>
   </head>
-
   <body>
     <form action="/recommend" method="post">
-      지하철역 가중치:
-      <input type="radio" name="지하철역" value="1" />
-      <input type="radio" name="지하철역" value="2" />
-      <input type="radio" name="지하철역" value="3" />
-      <input type="radio" name="지하철역" value="4" />
-      <input type="radio" name="지하철역" value="5" />
-      <br />
+      <div class="weight-box">
+        <div class="head">지하철역 가중치질문1</div>
+        <input type="radio" name="지하철역" value="1" />
+        <input type="radio" name="지하철역" value="2" />
+        <input type="radio" name="지하철역" value="3" />
+        <input type="radio" name="지하철역" value="4" />
+        <input type="radio" name="지하철역" value="5" />
+      </div>
 
       지하철역 가중치:
       <input type="radio" name="대형마트" value="1" />
