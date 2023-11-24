@@ -1,109 +1,547 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/web/main.css" />
     <title>Main page</title>
+    <link rel="stylesheet" href="/web/main.css" />
+    <style>
+      body {
+        background-image: url('/web/server/templates/다대포 닮은.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* 배경 이미지를 고정 */
+      }
+    </style>
   </head>
   <body>
     <form action="/recommend" method="post">
-      <div class="weight-box">
-        <div class="head">지하철역 가중치질문1</div>
-        <input type="radio" name="지하철역" value="1" />
-        <input type="radio" name="지하철역" value="2" />
-        <input type="radio" name="지하철역" value="3" />
-        <input type="radio" name="지하철역" value="4" />
-        <input type="radio" name="지하철역" value="5" />
+      <!-- 화면상 중앙에 뜬 창요소 -->
+      <div class="floating-window">
+        <div class="window-header">
+          <div class="window-title">easymove😀</div>
+          <div class="window-controls">
+            <div class="window-minimize"></div>
+            <div class="window-maximize"></div>
+            <div class="window-close"></div>
+          </div>
+        </div>
+
+        <!-- 질문과 입력이 들어갈 부분 -->
+        <!-- 교통 카테고리 입력 시작 -->
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">자차보다 대중교통을 이용하는 편이신가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="traffic1" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic1" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic1" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic1" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic1" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">대중교통 중 지하철을 선호하시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="traffic2" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic2" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic2" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic2" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic2" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">여가시간에 외출을 자주 하시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="traffic3" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic3" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic3" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic3" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic3" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">정시성을 중요하게 생각하시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="traffic4" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic4" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic4" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic4" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="traffic4" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 교통 카테고리 입력 끝 -->
+
+        <!-- 교육 카테고리 입력 시작 -->
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">추후 자녀계획이 있으신가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="education1" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education1" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education1" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education1" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education1" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">자녀의 교육에 대한 관심 정도는 어떻게 되시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="education2" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education2" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education2" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education2" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education2" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">어린이집 등하원을 직접 하고싶으신가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="education3" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education3" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education3" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education3" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="education3" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 교육 입력 끝 -->
+
+        <!-- 자연 입력 시작 -->
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">산책이나 러닝을 좋아하시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="nature1" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature1" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature1" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature1" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature1" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">자연과 가까이 지내고 싶으신가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="nature2" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature2" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature2" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature2" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature2" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">반려견을 키우고 있다면 활발한 편인가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="nature3" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature3" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature3" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature3" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature3" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">평소에 바다를 보고싶다는 생각을 자주 하시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="nature4" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature4" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature4" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature4" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature4" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">나는 바다가 좋다</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="nature5" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature5" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature5" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature5" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="nature5" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 자연 입력 끝 -->
+
+        <!-- 쇼핑 입력 시작 -->
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">장을 보러 자주 가시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="shopping1" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping1" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping1" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping1" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping1" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">보통 장을 볼 떄 걸어디니는 편이신가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="shopping2" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping2" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping2" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping2" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping2" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">장을 볼 때 온라인보단 오프라인을 이용하시나요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="shopping3" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping3" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping3" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping3" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="shopping3" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 쇼핑 입력 끝 -->
+
+        <!-- 사회 서비스 입력 시작 -->
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">일상생활에서 병원 방문이 자주 있으신가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="society1" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society1" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society1" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society1" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society1" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">치안과 안전에 대한 우려는 얼마나 큰가요?</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="society2" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society2" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society2" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society2" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society2" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="weight-box">
+            <div class="head">평소 밤길 돌아다니는 것이 무섭다</div>
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input type="radio" name="society3" value="1" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society3" value="2" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society3" value="3" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society3" value="4" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+              <label class="radio-button">
+                <input type="radio" name="society3" value="5" />
+                <span class="radio-button__checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 모든 입력 끝 -->
       </div>
-
-      지하철역 가중치:
-      <input type="radio" name="대형마트" value="1" />
-      <input type="radio" name="대형마트" value="2" />
-      <input type="radio" name="대형마트" value="3" />
-      <input type="radio" name="대형마트" value="4" />
-      <input type="radio" name="대형마트" value="5" />
-      <br />
-
-      지하철역 가중치:
-      <input type="radio" name="유치원" value="1" />
-      <input type="radio" name="유치원" value="2" />
-      <input type="radio" name="유치원" value="3" />
-      <input type="radio" name="유치원" value="4" />
-      <input type="radio" name="유치원" value="5" />
-      <br />
-
-      지하철역 가중치:
-      <input type="radio" name="경찰서" value="1" />
-      <input type="radio" name="경찰서" value="2" />
-      <input type="radio" name="경찰서" value="3" />
-      <input type="radio" name="경찰서" value="4" />
-      <input type="radio" name="경찰서" value="5" />
-      <br />
-
-      지하철역 가중치:
-      <input type="radio" name="종합병원" value="1" />
-      <input type="radio" name="종합병원" value="2" />
-      <input type="radio" name="종합병원" value="3" />
-      <input type="radio" name="종합병원" value="4" />
-      <input type="radio" name="종합병원" value="5" />
-      <br />
-
-      지하철역 가중치:
-      <input type="radio" name="소방서" value="1" />
-      <input type="radio" name="소방서" value="2" />
-      <input type="radio" name="소방서" value="3" />
-      <input type="radio" name="소방서" value="4" />
-      <input type="radio" name="소방서" value="5" />
-      <br />
-
-      지하철역 가중치:
-      <input type="radio" name="도시근린공원" value="1" />
-      <input type="radio" name="도시근린공원" value="2" />
-      <input type="radio" name="도시근린공원" value="3" />
-      <input type="radio" name="도시근린공원" value="4" />
-      <input type="radio" name="도시근린공원" value="5" />
-      <br />
-
-      지하철역 가중치:
-      <input type="radio" name="해수욕장" value="1" />
-      <input type="radio" name="해수욕장" value="2" />
-      <input type="radio" name="해수욕장" value="3" />
-      <input type="radio" name="해수욕장" value="4" />
-      <input type="radio" name="해수욕장" value="5" />
-      <br />
-
-      지하철역 가중치:
-      <input type="radio" name="대학교" value="1" />
-      <input type="radio" name="대학교" value="2" />
-      <input type="radio" name="대학교" value="3" />
-      <input type="radio" name="대학교" value="4" />
-      <input type="radio" name="대학교" value="5" />
-      <br />
-
       <input type="submit" value="제출" />
     </form>
   </body>
 </html>
-
-<!-- 1. 교통 : 사용자님은 ‘뚜벅이’ 이신가요?
-    1. 자차보다 대중교통을 이용하는 편이신가요?
-    2. 대중교통 중 지하철을 선호하시나요?
-    3. 여가시간에 외출을 자주 하시나요?
-    4. 정시성을 중요하게 생각하시나요?
-2. 교육 : 자녀계획 또는 자녀가 있으신가요?
-    1. 추후 자녀계획이 있으신가요?
-    2. 자녀의 교육에 대한 관심 정도는 어떻게 되시나요?
-    3. 어린이집 등하원을 직접 하고싶으신가요?
-3. 자연 : 산책을 좋아하시나요?, 바다 & 공원
-    1. 산책이나 러닝을 좋아하시나요?
-    2. 자연과 가까이 지내고싶으신가요? (어감 수정 필요)🐱
-    3. 반려견을 키우고 있다면 활발한 편인가요?
-    4. 평소에 바다를 보고싶다라는 생각을 자주 하시나요?
-    5. 나는 바다가 좋다
-4. 쇼핑 : 마트를 가는 방법은? 
-    1. 장을 보러 자주 가시나요?
-    2. 보통 장을 볼 때 걸어다니는 편이신가요? (걸어서: 가중치 높게, 차타고: 가중치 낮게 )
-    3. 장을 볼 때 온라인보단 오프라인을 이용하시나요?
-5. 사회 서비스 : 
-    1. 일상생활에서 병원 방문이 자주 있으신가요?
-    2. 일상생활에서 치안과 안전에 대한 우려는 얼마나 큰가요?
-    3. 평소 밤길 돌아다니는 것이 무섭다 -->

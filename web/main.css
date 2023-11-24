@@ -1,13 +1,110 @@
-.weight-box {
-  /* 여기에 원하는 스타일을 입력하세요. */
-  width: 100%;
-  padding: 10px;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
+/* body {
+  background-image: url('/web/server/templates/다대포 닮은.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+.floating-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 9999;
 }
 
-.weight-box .head {
-  /* 'head' 클래스가 'weight-box' 클래스 내부에 있는 경우에 적용됩니다. */
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.window-title {
+  margin: 0;
+  font-size: 13px;
   font-weight: bold;
-  color: #333;
+  color: rgba(0, 0, 0, 0.485);
+}
+
+.window-controls {
+  display: flex;
+}
+
+.window-minimize,
+.window-maximize,
+.window-close {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  border-radius: 50%;
+}
+
+.window-minimize {
+  background-color: #f7d54a;
+}
+
+.window-maximize {
+  background-color: #62c462;
+}
+
+.window-close {
+  background-color: #ee5f5b;
+}
+
+.window-content {
+  padding: 12px;
+}
+
+.radio-buttons {
+  text-align: center;
+}
+
+/* 라디오 버튼 숨기기 */
+.radio-button input[type='radio'] {
+  display: none;
+}
+
+/* 사용자 정의 라디오 버튼 */
+.radio-button {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+/* 라디오 버튼 체크마크 */
+.radio-button__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* 라디오 버튼 호버 효과 */
+.radio-button:hover input ~ .radio-button__checkmark {
+  background-color: #ccc;
+}
+
+/* 라디오 버튼 선택 시 체크마크 색상 변경 */
+.radio-button input:checked ~ .radio-button__checkmark {
+  background-color: #2196f3;
+}
+
+.head {
+  font-size: 23px;
+  text-align: center;
 }
