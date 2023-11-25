@@ -1,9 +1,14 @@
-/* body {
+body {
   background-image: url('/web/server/templates/다대포 닮은.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-} */
+  background-attachment: fixed; /* 배경 이미지를 고정 */
+}
+
+.hidden {
+  display: none;
+}
 
 .floating-window {
   position: absolute;
