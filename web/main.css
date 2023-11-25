@@ -3,12 +3,14 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* 배경 이미지를 고정 */
+  background-attachment: fixed;
 }
 
 .hidden {
   display: none;
 }
+
+/* 맥북 디자인 시작 */
 
 .floating-window {
   position: absolute;
@@ -16,6 +18,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 900px;
+  height: 500px;
   background-color: #f6f6f6;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -64,20 +67,35 @@ body {
   background-color: #ee5f5b;
 }
 
-.window-content {
+/* 맥북 디자인 끝 */
+/* 카테고리 버튼 시작 */
+
+/* 카테고리 버튼 끝 */
+/* 질문지 시작 */
+
+.category-container {
+}
+
+.category-title {
+}
+
+.question-box {
   padding: 12px;
+}
+
+.question-title {
+  font-size: 23px;
+  text-align: center;
 }
 
 .radio-buttons {
   text-align: center;
 }
 
-/* 라디오 버튼 숨기기 */
 .radio-button input[type='radio'] {
   display: none;
 }
 
-/* 사용자 정의 라디오 버튼 */
 .radio-button {
   display: inline-block;
   position: relative;
@@ -88,7 +106,6 @@ body {
   user-select: none;
 }
 
-/* 라디오 버튼 체크마크 */
 .radio-button__checkmark {
   position: absolute;
   top: 0;
@@ -99,17 +116,42 @@ body {
   border-radius: 50%;
 }
 
-/* 라디오 버튼 호버 효과 */
 .radio-button:hover input ~ .radio-button__checkmark {
   background-color: #ccc;
 }
 
-/* 라디오 버튼 선택 시 체크마크 색상 변경 */
 .radio-button input:checked ~ .radio-button__checkmark {
   background-color: #2196f3;
 }
 
-.head {
-  font-size: 23px;
-  text-align: center;
+/* 질문지 끝 */
+
+/* 애니메이션 시작 */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.category-container {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.category-container.hidden {
+  animation: fadeOut 0.5s ease;
+}
+
+/* 애니메이션 끝 */
