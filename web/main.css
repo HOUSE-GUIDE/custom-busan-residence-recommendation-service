@@ -68,25 +68,60 @@ body {
 }
 
 /* 맥북 디자인 끝 */
+/* 카테고리 질문지 시작 */
 
 .category-all {
   display: flex;
   flex-direction: row;
 }
 
+/* 카테고리 질문지 끝 */
+/* 카테고리 버튼 시작 */
+
 .category-selection {
   display: flex;
   flex-direction: column;
+  margin-top: 0.3rem;
+  padding-right: 2rem;
+  position: relative;
 }
+
+.category-selection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(1px);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.category-button {
+  width: 10rem;
+  height: 2rem;
+  margin: 1.85rem 0 1.85rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #f6f6f6;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* 카테고리 버튼 끝 */
+/* 카테고리 질문 시작 */
 
 .category-question {
   margin-left: 10rem;
 }
 
-/* 카테고리 버튼 시작 */
-
-/* 카테고리 버튼 끝 */
-/* 질문지 시작 */
+.initial-message {
+  position: absolute;
+  top: 50%;
+  left: 37.5%;
+  font-size: 1.5rem;
+  color: #333;
+}
 
 .category-container {
 }
@@ -139,7 +174,7 @@ body {
   background-color: #2196f3;
 }
 
-/* 질문지 끝 */
+/* 카테고리 질문 끝 */
 
 /* 애니메이션 시작 */
 
