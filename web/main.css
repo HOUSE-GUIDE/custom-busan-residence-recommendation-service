@@ -68,6 +68,21 @@ body {
 }
 
 /* 맥북 디자인 끝 */
+
+.category-all {
+  display: flex;
+  flex-direction: row;
+}
+
+.category-selection {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-question {
+  margin-left: 10rem;
+}
+
 /* 카테고리 버튼 시작 */
 
 /* 카테고리 버튼 끝 */
