@@ -124,10 +124,44 @@ body {
 }
 
 .category-container {
+  /* 아래의 카테고리 타이틀 부분 만지고 있었음 !! */
 }
 
-.category-title {
+/* .category-title {
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  margin: 0 auto 1rem auto;
+  max-width: 65rem;
 }
+
+.category-left {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  margin-right: auto;
+}
+
+.category-name {
+  color: #111827;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.15rem;
+}
+
+.category-comment {
+  color: #111827;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.category-image {
+  width: 13rem;
+  height: 7rem;
+  padding-right: 50px;
+} */
 
 .question-box {
   padding: 12px;
