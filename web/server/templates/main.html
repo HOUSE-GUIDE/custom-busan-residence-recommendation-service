@@ -548,15 +548,6 @@
   </body>
 
   <script>
-    // function showCategory(category) {
-    //   var categories = ['traffic', 'education', 'nature', 'shopping', 'society'];
-    //   categories.forEach((cat) => {
-    //     document.getElementById(cat).classList.add('hidden');
-    //   });
-    //   document.getElementById(category).classList.remove('hidden');
-    //   checkAnswers(category);
-    // }
-
     function showCategory(category) {
       var categories = ['traffic', 'education', 'nature', 'shopping', 'society'];
       categories.forEach((cat) => {
@@ -588,18 +579,31 @@
       var uniqueNames = [...new Set(Array.from(inputs).map((input) => input.name))];
       var checkedInputs = Array.from(inputs).filter((input) => input.checked);
       var checkedNames = [...new Set(checkedInputs.map((input) => input.name))];
+
       if (uniqueNames.length === checkedNames.length) {
         document.querySelector(
           'button[onclick="showCategory(\'' + category + '\')"]'
         ).disabled = true;
+        console.log('가중치 입력 완료 !');
         checkAllAnswered();
       }
     }
 
     function checkAllAnswered() {
       var buttons = document.querySelectorAll('button[type="button"]');
-      if (Array.from(buttons).every((button) => button.disabled)) {
-        document.getElementById('submit').style.display = 'block';
+      var allButtonsDisabled = true;
+
+      buttons.forEach((button) => {
+        if (!button.disabled) {
+          allButtonsDisabled = false;
+        }
+      });
+
+      if (allButtonsDisabled) {
+        document.querySelectorAll('#submit').forEach((submitBtn) => {
+          submitBtn.style.display = 'block';
+        });
+        console.log('제출 버튼 활성화 !');
       }
     }
   </script>
