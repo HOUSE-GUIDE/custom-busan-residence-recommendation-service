@@ -145,7 +145,7 @@ def calculate_similarity(user_weights):
 
     # 사용자 가중치와 각 동과의 유사도 계산
     user_weights_expanded_2d = user_weights_expanded[np.newaxis, :]  # 2차원 배열로 변환
-    user_dong_similarity = cosine_similarity(user_weights_expanded_2d, df_matrix_weighted)[0]  # 수정된 부분
+    user_dong_similarity = cosine_similarity(user_weights_expanded_2d, df_matrix_weighted)[0]  # 코사인 유사도
 
     # 유사도가 가장 높은 동 3개 추출
     top3_dong_index = user_dong_similarity.argsort()[-3:][::-1]
@@ -153,25 +153,26 @@ def calculate_similarity(user_weights):
 
     return top3_dong
 
-user_weights = {
+# test 데이터, 프론트에서 입력받을 가중치들을 임의로 배정한 것임당😀
+user_weights = { 
     'traffic1': 1,
-    'traffic2': 2,
-    'traffic3': 3,
-    'traffic4': 4,
+    'traffic2': 1,
+    'traffic3': 2,
+    'traffic4': 3,
     'education1': 1,
-    'education2': 2,
-    'education3': 3,
-    'nature1': 1,
-    'nature2': 2,
+    'education2': 1,
+    'education3': 1,
+    'nature1': 4,
+    'nature2': 4,
     'nature3': 3,
-    'nature4': 4,
+    'nature4': 5,
     'nature5': 5,
-    'shopping1': 1,
-    'shopping2': 2,
-    'shopping3': 3,
-    'society1': 1,
-    'society2': 2,
-    'society3': 3
+    'shopping1': 3,
+    'shopping2': 1,
+    'shopping3': 4,
+    'society1': 4,
+    'society2': 5,
+    'society3': 1
 }
 
 top3_dong = calculate_similarity(user_weights)
