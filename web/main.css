@@ -239,6 +239,13 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#submit:hover {
+  transform: scale(1.05);
+  background-color: #1976d2;
 }
 
 /* 카테고리 질문 끝 */
