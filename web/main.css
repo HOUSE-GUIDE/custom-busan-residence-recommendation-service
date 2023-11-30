@@ -93,7 +93,7 @@ body {
   right: 0;
   transform: translateX(1px);
   width: 2px;
-  height: 100%;
+  height: 460px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
@@ -110,6 +110,11 @@ body {
 
 .category-button:hover {
   transform: scale(1.1);
+}
+
+.category-button:disabled:hover {
+  transform: none;
+  cursor: auto;
 }
 
 /* 카테고리 버튼 끝 */
@@ -129,17 +134,37 @@ body {
 
 .category-container {
   margin-left: -4rem;
+  padding-right: 5.35rem;
+  max-height: 465px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.category-container::-webkit-scrollbar {
+  width: 15px;
+}
+
+.category-container::-webkit-scrollbar-track {
+  background-color: #d3d3d3;
+}
+
+.category-container::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
 }
 
 .category-title {
   display: flex;
   flex-direction: row;
   background-color: #f0f0f0;
-  border-radius: 20px;
-  margin-top: 1rem;
+  border-radius: 10px;
+  margin: 0.8rem 0 1rem 0;
   width: 30rem;
   height: 5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  color: #333;
 }
+
 .category-name {
   font-size: 1.75rem;
   font-weight: bold;
@@ -149,19 +174,29 @@ body {
 .category-image {
   width: 12.5rem;
   margin-left: auto;
+  padding-right: 1rem;
 }
 
 .question-box {
-  padding: 12px;
+  padding: 10px 0 25px 0;
+  margin: 10px 0 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
 .question-title {
-  font-size: 23px;
+  font-size: 1.3rem;
   text-align: center;
+  color: #4a4a4a;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
 .radio-buttons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -0.25rem;
 }
 
 .radio-button input[type='radio'] {
@@ -196,8 +231,17 @@ body {
   background-color: #2196f3;
 }
 
-/* 카테고리 질문 끝 */
+#submit {
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
 
+/* 카테고리 질문 끝 */
 /* 애니메이션 시작 */
 
 @keyframes fadeIn {
