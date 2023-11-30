@@ -781,23 +781,41 @@
   </body>
 
   <script>
+    // function showCategory(category) {
+    //   var categories = ['traffic', 'education', 'nature', 'shopping', 'society'];
+    //   categories.forEach((cat) => {
+    //     var element = document.getElementById(cat);
+    //     if (cat === category) {
+    //       element.style.animationName = 'fadeIn';
+    //       setTimeout(() => element.classList.remove('hidden'), 500);
+    //     } else {
+    //       element.style.animationName = 'fadeOut';
+    //       setTimeout(() => element.classList.add('hidden'), 500);
+    //     }
+    //   });
+
+    //   var initialMessage = document.querySelector('.initial-message');
+    //   if (initialMessage) {
+    //     initialMessage.style.display = 'none';
+    //   }
+
+    //   checkAnswers(category);
+    // }
+
     function showCategory(category) {
       var categories = ['traffic', 'education', 'nature', 'shopping', 'society'];
       categories.forEach((cat) => {
         var element = document.getElementById(cat);
+        var initialMessage = document.querySelector('.initial-message');
         if (cat === category) {
           element.style.animationName = 'fadeIn';
           setTimeout(() => element.classList.remove('hidden'), 500);
         } else {
           element.style.animationName = 'fadeOut';
+          initialMessage.style.animationName = 'fadeOut';
           setTimeout(() => element.classList.add('hidden'), 500);
         }
       });
-
-      var initialMessage = document.querySelector('.initial-message');
-      if (initialMessage) {
-        initialMessage.style.display = 'none';
-      }
 
       checkAnswers(category);
     }

@@ -128,7 +128,7 @@ body {
 }
 
 .category-container {
-  margin-left: -1.5rem;
+  margin-left: -4rem;
 }
 
 .category-title {
@@ -223,6 +223,14 @@ body {
 }
 
 .category-container.hidden {
+  animation: fadeOut 0.5s ease;
+}
+
+.initial-message {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.initial-message.hidden {
   animation: fadeOut 0.5s ease;
 }
 
