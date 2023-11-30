@@ -138,26 +138,12 @@ body {
   margin: 0 auto 1rem auto;
   max-width: 65rem;
 }
-
-.category-left {
-  display: flex;
-  flex-direction: column;
-  /* padding: 30px   40px; */
-  margin-right: auto;
-}
-
 .category-name {
   color: #111827;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: bold;
   margin-bottom: 0.15rem;
-}
-
-.category-comment {
-  color: #111827;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .category-image {
