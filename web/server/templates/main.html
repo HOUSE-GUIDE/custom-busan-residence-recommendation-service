@@ -7,16 +7,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="/web/main.css" />
-    <title>Main page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <title>EasyMove</title>
   </head>
+
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/ocean.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
 
   <body>
     <form action="/recommend" method="post">
       <div class="floating-window">
         <!-- 맥북 디자인 시작 -->
         <div class="window-header">
-          <div class="window-title">easymove😀</div>
+          <div class="window-title">EasyMove😀</div>
           <div class="window-controls">
             <div class="window-minimize"></div>
             <div class="window-maximize"></div>
@@ -59,7 +69,7 @@
                 <div class="category-name">교 통</div>
                 <img
                   class="category-image"
-                  src="/web/server/templates/images/traffic.png"
+                  src="{{ url_for('static', filename='images/traffic.png') }}"
                   alt="사진없음"
                 />
               </div>
@@ -203,7 +213,7 @@
                 <div class="category-name">교 육</div>
                 <img
                   class="category-image"
-                  src="/web/server/templates/images/education.png"
+                  src="{{ url_for('static', filename='images/education.png') }}"
                   alt="사진없음"
                 />
               </div>
@@ -347,7 +357,7 @@
                 <div class="category-name">자 연</div>
                 <img
                   class="category-image"
-                  src="/web/server/templates/images/nature.png"
+                  src="{{ url_for('static', filename='images/nature.png') }}"
                   alt="사진없음"
                 />
               </div>
@@ -491,7 +501,7 @@
                 <div class="category-name">쇼 핑</div>
                 <img
                   class="category-image"
-                  src="/web/server/templates/images/shopping.png"
+                  src="{{ url_for('static', filename='images/shopping.png') }}"
                   alt="사진없음"
                 />
               </div>
@@ -635,7 +645,7 @@
                 <div class="category-name">사 회</div>
                 <img
                   class="category-image"
-                  src="/web/server/templates/images/society.png"
+                  src="{{ url_for('static', filename='images/society.png') }}"
                   alt="사진없음"
                 />
               </div>

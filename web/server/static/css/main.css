@@ -1,11 +1,3 @@
-body {
-  background-image: url('/web/server/templates/images/ocean.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 .hidden {
   display: none;
 }
@@ -39,7 +31,7 @@ body {
   margin: 0;
   font-size: 13px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.485);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .window-controls {
