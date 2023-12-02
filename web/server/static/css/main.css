@@ -191,6 +191,21 @@
   margin-top: -0.25rem;
 }
 
+.negative,
+.positive {
+  color: gray;
+  font-size: 0.7rem;
+  margin-top: 0.65rem;
+}
+
+.negative {
+  margin-right: 0.5rem;
+}
+
+.positive {
+  margin-left: -0.1rem;
+}
+
 .radio-button input[type='radio'] {
   display: none;
 }

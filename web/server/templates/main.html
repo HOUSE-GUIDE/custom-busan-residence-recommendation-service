@@ -8,7 +8,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
-    <title>EasyMove</title>
+    <!-- <link rel="stylesheet" href="/web/server/static/css/main.css" /> -->
+
+    <title>easymove</title>
   </head>
 
   <style>
@@ -26,7 +28,7 @@
       <div class="floating-window">
         <!-- 맥북 디자인 시작 -->
         <div class="window-header">
-          <div class="window-title">EasyMove😀</div>
+          <div class="window-title">easymove😀</div>
           <div class="window-controls">
             <div class="window-minimize"></div>
             <div class="window-maximize"></div>
@@ -77,6 +79,7 @@
               <div class="question-box">
                 <div class="question-title">대중교통이 편리한 곳을 선호한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="traffic1" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -97,12 +100,14 @@
                     <input type="radio" name="traffic1" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">본인 명의의 자동차를 보유하고 있지 않다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="traffic2" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -123,12 +128,14 @@
                     <input type="radio" name="traffic2" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">이동하기 위해 주로 대중교통을 이용한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="traffic3" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -149,12 +156,14 @@
                     <input type="radio" name="traffic3" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">대중교통 중 지하철을 자주 이용한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="traffic4" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -175,12 +184,14 @@
                     <input type="radio" name="traffic4" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">다른 지역을 자주 방문한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="traffic5" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -201,6 +212,7 @@
                     <input type="radio" name="traffic5" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
               <input id="submit" class="hidden" type="submit" value="검사 결과 확인하기" />
@@ -221,6 +233,7 @@
               <div class="question-box">
                 <div class="question-title">교육 기관 근처에 거주하고 싶다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="education1" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -241,12 +254,14 @@
                     <input type="radio" name="education1" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">대학가 상권 근처에서 생활하고 싶다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="education2" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -267,12 +282,14 @@
                     <input type="radio" name="education2" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">자녀가 있거나 추후 계획이 있다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="education3" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -293,12 +310,14 @@
                     <input type="radio" name="education3" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">자녀 교육에 큰 관심을 가지고 있다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="education4" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -319,12 +338,14 @@
                     <input type="radio" name="education4" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">유치원 등하원을 직접 하고 싶다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="education5" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -345,6 +366,7 @@
                     <input type="radio" name="education5" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
               <input id="submit" class="hidden" type="submit" value="검사 결과 확인하기" />
@@ -365,6 +387,7 @@
               <div class="question-box">
                 <div class="question-title">자연 환경이 주변에 있는 곳을 선호한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="nature1" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -385,12 +408,14 @@
                     <input type="radio" name="nature1" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">자연적인 환경과 가까이 지내고 싶다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="nature2" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -411,12 +436,14 @@
                     <input type="radio" name="nature2" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">산책이나 조깅을 즐긴다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="nature3" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -437,12 +464,14 @@
                     <input type="radio" name="nature3" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">반려동물을 키우고 있다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="nature4" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -463,12 +492,14 @@
                     <input type="radio" name="nature4" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">평소에 바다를 자주 보러 다닌다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="nature5" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -489,6 +520,7 @@
                     <input type="radio" name="nature5" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
               <input id="submit" class="hidden" type="submit" value="검사 결과 확인하기" />
@@ -509,6 +541,7 @@
               <div class="question-box">
                 <div class="question-title">쇼핑 시설이 가까웠으면 좋겠다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="shopping1" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -529,12 +562,14 @@
                     <input type="radio" name="shopping1" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">장을 보러 가는 주기가 짧은 편이다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="shopping2" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -555,12 +590,14 @@
                     <input type="radio" name="shopping2" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">인터넷 쇼핑보다 오프라인 매장을 선호한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="shopping3" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -581,12 +618,14 @@
                     <input type="radio" name="shopping3" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">도보를 통해 오프라인 매장을 방문한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="shopping4" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -607,12 +646,14 @@
                     <input type="radio" name="shopping4" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">의류를 구매하기 전에 실착을 하는 편이다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="shopping5" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -633,6 +674,7 @@
                     <input type="radio" name="shopping5" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
               <input id="submit" class="hidden" type="submit" value="검사 결과 확인하기" />
@@ -653,6 +695,7 @@
               <div class="question-box">
                 <div class="question-title">공공 서비스나 시설이 가까웠으면 좋겠다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="society1" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -673,12 +716,14 @@
                     <input type="radio" name="society1" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">병원을 정기적으로 방문한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="society2" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -699,12 +744,14 @@
                     <input type="radio" name="society2" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">밤에 외출하는 것이 불안하다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="society3" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -725,12 +772,14 @@
                     <input type="radio" name="society3" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">치안과 안전에 대한 우려가 크다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="society4" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -751,12 +800,14 @@
                     <input type="radio" name="society4" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
 
               <div class="question-box">
                 <div class="question-title">비상 시, 119에 상대적으로 가까운 곳을 선호한다</div>
                 <div class="radio-buttons">
+                  <div class="negative">부정</div>
                   <label class="radio-button">
                     <input type="radio" name="society5" value="1" />
                     <span class="radio-button__checkmark"></span>
@@ -777,6 +828,7 @@
                     <input type="radio" name="society5" value="5" />
                     <span class="radio-button__checkmark"></span>
                   </label>
+                  <div class="positive">긍정</div>
                 </div>
               </div>
               <input id="submit" class="hidden" type="submit" value="검사 결과 확인하기" />
