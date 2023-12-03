@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Recommendation Result</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='images/house.png') }}" />
+    <title>easymove</title>
   </head>
+
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/ocean.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+
   <body>
-    <h1>Recommended Areas</h1>
-    {% for dong in top3_dong %}
-    <p>{{ dong }}</p>
-    {% endfor %}
-    <a href="/">Back to form</a>
+    <div class="floating-window">
+      <!-- 맥북 디자인 시작 -->
+      <div class="window-header">
+        <div class="window-title">easymove😀</div>
+        <div class="window-controls">
+          <div class="window-minimize"></div>
+          <div class="window-maximize"></div>
+          <div class="window-close"></div>
+        </div>
+      </div>
+      <!-- 맥북 디자인 끝 -->
+
+      <!-- 결과 페이지 시작 -->
+      <div class="result-title">행정동 추천 결과</div>
+      <div class="result-container">
+        {% for dong in top3_dong %}
+        <div class="result-item">
+          <img
+            class="result-image"
+            src="{{ url_for('static', filename='images/' ~ loop.index ~ '.png') }}"
+            alt="사진없음"
+          />
+          <div class="result-dong">{{ dong }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <a href="/" class="back-link">처음으로</a>
+      <!-- 결과 페이지 끝 -->
+    </div>
   </body>
 </html>
